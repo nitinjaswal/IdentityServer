@@ -1,0 +1,49 @@
+How it works
+
+1. IdentityServer Configuration
+
+Configures API Resources, API Scopes, Clients, and User Claims.
+
+Issues ID Token and Access Token.
+
+2. Web Client (OIDC Login)
+
+Redirects user to IdentityServer Login Page.
+
+Receives ID Token to authenticate the user.
+
+Stores tokens securely in cookies.
+
+3. API (JWT Authorization)
+
+Accepts Access Tokens.
+
+Verifies user permissions based on roles.
+
+
+-ID token vs access token?
+-ID token is generated when user logins. It is used for authentication purpose. ID token = Who is the user. It is used only for Authentication
+-
+
+When is ID token used?
+- Only during login
+- CANNOT be used to call API'S
+
+What is an access token?
+- Access token = Wat can the user do?
+- It is used for Authorization
+
+When is Access token Used?
+- NOT used by Web Client
+- Sent with every request to API
+
+
+ How IdentityServer Issues These Tokens:
+ - ID Token is issued when the user logs in (OpenID Connect flow).
+ - Contains user claims like email, username, roles, etc.
+ - Used by the web client to authenticate the user.
+
+Access Token is issued to allow the client to call APIs on behalf of the user.
+
+ - Contains scopes like api1, admin
+ - Used by APIs to verify if the user is allowed to access certain endpoints.
