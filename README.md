@@ -1,4 +1,4 @@
-This project demonstrates how to set up IdentityServer with Duende IdentityServer to secure APIs and authenticate uses
+This project demonstrates how to set up IdentityServer with Duende IdentityServer to secure APIs and authenticate users
 
 This solution inlcudes:
 1. IdentityServer - Authentication and Authorization Server
